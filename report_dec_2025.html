@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Status Update</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+
+        th {
+            background: #34495e;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+            border: 1px solid #2c3e50;
+        }
+
+        td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            vertical-align: top;
+        }
+
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        .status-pending {
+            background: #fff3cd;
+            padding: 4px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            font-weight: bold;
+            color: #856404;
+        }
+
+        .status-progress {
+            background: #cce5ff;
+            padding: 4px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            font-weight: bold;
+            color: #004085;
+        }
+
+        .status-completed {
+            background: #d4edda;
+            padding: 4px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            font-weight: bold;
+            color: #155724;
+        }
+
+        .priority-high {
+            color: #d9534f;
+            font-weight: bold;
+        }
+
+        .priority-medium {
+            color: #f0ad4e;
+            font-weight: bold;
+        }
+
+        .priority-low {
+            color: #5bc0de;
+            font-weight: bold;
+        }
+
+        .link {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .link:hover {
+            text-decoration: underline;
+        }
+
+        button {
+            background: #27ae60;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: #229954;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>AI FLOW ARCHITECT - PROJECT STATUS UPDATE</h1>
+        <p><strong>Date:</strong> December 2025 | <strong>Prepared by:</strong> AI Flow Architect Team</p>
+
+        <button onclick="exportToExcel()">📥 Download as Excel</button>
+
+        <h2 style="margin-top: 30px; color: #34495e;">ONGOING PROJECTS</h2>
+        <table id="projectTable">
+            <thead>
+                <tr>
+                    <th style="width: 5%;">S.No</th>
+                    <th style="width: 20%;">Project Name</th>
+                    <th style="width: 12%;">Status</th>
+                    <th style="width: 35%;">Description / Current Work</th>
+                    <th style="width: 18%;">Next Steps / Pending Items</th>
+                    <th style="width: 10%;">Priority</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>AI Training Sessions for Team</td>
+                    <td><span class="status-progress">In Progress</span></td>
+                    <td>✅ Completed: 3 sessions on basic tools and AI tools in design</td>
+                    <td>Working for - Team-specific AI training for:<br>• 3D Visuals Team<br>• Interior Design Team<br>•
+                        AutoCAD Drafting Team</td>
+                    <td class="priority-high">High</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Domain Management</td>
+                    <td><span class="status-pending">Pending</span></td>
+                    <td>Multiple domains (Porul, Venbaa, and others) need organization</td>
+                    <td>Action Required: Compile and organize domain list for Siddharth</td>
+                    <td class="priority-high">High</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Website Issues</td>
+                    <td><span class="status-progress">In Progress</span></td>
+                    <td>✅ Working with WAC team on security<br>✅ Focus: Page promotion through project updates and
+                        encouraging internal team engagement</td>
+                    <td>Need to upload new projects - selection in progress</td>
+                    <td class="priority-medium">Medium</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Network & Server Organization</td>
+                    <td><span class="status-progress">In Progress</span></td>
+                    <td>✅ Implemented FRTS folder structure<br>✅ Starting with 3D Visuals team (coordinating with
+                        Mahendran and Gowtham)<br>✅ Team has been informed and will implement strictly</td>
+                    <td>Goal: Segregate files, delete unwanted data, free up server space</td>
+                    <td class="priority-high">High</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Asset Finder Development</td>
+                    <td><span class="status-pending">Pending</span></td>
+                    <td>Creating centralized asset finder for textures, 3D files, 3ds Max files, etc.</td>
+                    <td>Requires proper folder structure implementation first - connect with FRTS folder structure</td>
+                    <td class="priority-medium">Medium</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 style="margin-top: 30px; color: #34495e;">COMPLETED / IN-PROGRESS PROJECTS</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 5%;">S.No</th>
+                    <th style="width: 20%;">Project Name</th>
+                    <th style="width: 12%;">Status</th>
+                    <th style="width: 35%;">Description / Current Work</th>
+                    <th style="width: 18%;">Next Steps</th>
+                    <th style="width: 10%;">Priority</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>6</td>
+                    <td>Eliya Project</td>
+                    <td><span class="status-progress">In Progress</span></td>
+                    <td>✅ Updated with new flow from Instrive team (based on Rubi and Aishwarya's suggestions)<br>✅
+                        Testing with one client</td>
+                    <td>User case study ongoing to refine workflow</td>
+                    <td class="priority-medium">Medium</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Vinyl Disc Project</td>
+                    <td><span class="status-completed">Completed</span></td>
+                    <td>✅ Complete from my end<br>✅ Local deployment and testing done<br>✅ 10 files regenerated with
+                        metadata and songs information<br>✅ PDF generated per Siddharth's ideas<br>✅ Currently local
+                        with secure password</td>
+                    <td>• Upload 100 random songs<br>• Segregate by genre/playlist<br>• Create database using Eliya
+                        project flow<br>• Convert to Mac, Windows, web, iPad, and mobile versions</td>
+                    <td class="priority-low">Low</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Rotary Project</td>
+                    <td><span class="status-completed">Completed</span></td>
+                    <td>✅ Data extraction during meeting completed and shared with Siddharth<br>✅ Meeting conversations
+                        converted to data with summaries</td>
+                    <td>• Audio-to-summary and presentation conversion pipeline<br>• Focus to arrange in structured
+                        format</td>
+                    <td class="priority-medium">Medium</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Doodleden AI<br><strong>DreamSpace AI - Creator Workspace</strong><br><a
+                            href="https://doodledenai.vercel.app/" target="_blank"
+                            class="link">https://doodledenai.vercel.app/</a></td>
+                    <td><span class="status-progress">In Progress</span></td>
+                    <td>✅ New AI design platform for Pencila and Monk teams<br>✅ Features: Quick design ideas, mood
+                        boards, furniture visualization in empty rooms<br>✅ 3D diagram access in AutoCAD elevation<br>✅
+                        Prop changing, sketch-to-render capabilities<br>✅ Base version complete</td>
+                    <td>• Multiple angle views (approximately 50% complete)<br>• Working on enhancements</td>
+                    <td class="priority-high">High</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>PM Design Studio<br><strong>Pmstudioai</strong><br><a href="https://pmstudioai.vercel.app/"
+                            target="_blank" class="link">https://pmstudioai.vercel.app/</a></td>
+                    <td><span class="status-completed">Completed</span></td>
+                    <td>✅ Temporary solution for team DESIGN AI<br>✅ Upload empty image and render according to mood
+                        board<br>✅ Previous version of Doodleden</td>
+                    <td>Transition users to Doodleden when ready</td>
+                    <td class="priority-low">Low</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Dahda Project</td>
+                    <td><span class="status-completed">Completed</span></td>
+                    <td>✅ Completed and delivered to Hari<br>✅ Used AI to create diagram scenes quickly<br>✅ Generated
+                        different views with cantilever and location-specific visuals<br>✅ Used Hedgesfield for fast
+                        output generation</td>
+                    <td>Project closed - delivered</td>
+                    <td class="priority-low">Low</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 style="margin-top: 30px; color: #34495e;">Summary Statistics</h2>
+        <table style="width: 50%;">
+            <tr>
+                <th>Status Category</th>
+                <th>Count</th>
+            </tr>
+            <tr>
+                <td><span class="status-completed">Completed</span></td>
+                <td>3 Projects</td>
+            </tr>
+            <tr>
+                <td><span class="status-progress">In Progress</span></td>
+                <td>6 Projects</td>
+            </tr>
+            <tr>
+                <td><span class="status-pending">Pending</span></td>
+                <td>2 Projects</td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        function exportToExcel() {
+            const tables = document.querySelectorAll('table');
+            let html = '<html><head><meta charset="utf-8"></head><body>';
+            html += '<h1>AI FLOW ARCHITECT - PROJECT STATUS UPDATE</h1>';
+            html += '<p><strong>Date:</strong> December 2025</p>';
+
+            tables.forEach(table => {
+                html += table.outerHTML;
+            });
+
+            html += '</body></html>';
+
+            // Create a blob with the HTML content
+            const blob = new Blob(['\ufeff', html], {
+                type: 'application/vnd.ms-excel'
+            });
+
+            // Create download link
+            const url = window.URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'AI_Flow_Architect_Project_Status_' + new Date().toISOString().slice(0, 10) + '.xls';
+            link.click();
+
+            // Cleanup
+            window.URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+
+</html>
